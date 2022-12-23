@@ -35,6 +35,9 @@
             this.accounts = new Final_Project_PBO_1.Accounts();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderBorrower.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
@@ -66,6 +69,10 @@
             // 
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.name,
+            this.username});
             this.dataGridViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
             this.dataGridViewUser.Location = new System.Drawing.Point(25, 100);
             this.dataGridViewUser.Name = "dataGridViewUser";
@@ -87,6 +94,21 @@
             // 
             this.accountsBindingSource1.DataSource = this.accounts;
             this.accountsBindingSource1.Position = 0;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "name";
+            this.name.Name = "name";
+            // 
+            // username
+            // 
+            this.username.HeaderText = "username";
+            this.username.Name = "username";
             // 
             // AdminPageUserList
             // 
@@ -115,5 +137,8 @@
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private Accounts accounts;
         private System.Windows.Forms.BindingSource accountsBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
     }
 }

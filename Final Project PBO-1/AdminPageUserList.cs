@@ -21,7 +21,7 @@ namespace Final_Project_PBO_1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridViewUser.Rows.Add();
         }
 
     }
