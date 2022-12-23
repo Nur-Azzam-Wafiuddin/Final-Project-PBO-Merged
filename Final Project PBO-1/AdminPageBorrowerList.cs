@@ -28,9 +28,9 @@ namespace Final_Project_PBO_1
                 List<ProductHistory> productHistories = account.productHistory;
                 foreach (ProductHistory productHistory in productHistories)
                 {
-                    FinishProductHistory = FinishProductHistory + productHistory.Name + ", ";
+                    FinishProductHistory = FinishProductHistory + productHistory.name + ", ";
                 }
-                dataGridViewBorrower.Rows.Add(account.Name.ToString(), account.username.ToString(), FinishProductHistory);
+                dataGridViewBorrower.Rows.Add(account.name.ToString(), account.username.ToString(), FinishProductHistory);
             }
         }
 

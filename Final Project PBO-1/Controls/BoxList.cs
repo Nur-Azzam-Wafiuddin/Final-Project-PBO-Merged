@@ -24,25 +24,43 @@ namespace Final_Project_PBO_1
         public void LoadThis(object sender, EventArgs e)
         {
             ProductController productController = new ProductController();
+            List<Product> listproduct = productController.GetAllProduct();
 
-            if (productController.GetProductById(this.TabIndex + 1).name != null)
+            if (this.TabIndex < listproduct.Count()) 
             {
-                string changeName = productController.GetProductById(this.TabIndex + 1).name;
-                lblGearName.Text = changeName;
-                bool changeAvailability = productController.GetProductById(this.TabIndex + 1).isAvailable;
-                if (changeAvailability == false)
+                if (listproduct.ToArray()[this.TabIndex].name != null && this.TabIndex < listproduct.Count())
                 {
+                    string changeName = listproduct[this.TabIndex].name;
+                    lblGearName.Text = changeName;
+                    bool changeAvailability = listproduct[this.TabIndex].isAvailable;
+                    if (changeAvailability == false)
+                    {
+                        lblAvailability.Text = "Unavailable";
+                        lblAvailability.ForeColor = System.Drawing.Color.OrangeRed;
+                    }
+                }
+                /*
+                if (productController.GetProductById(this.TabIndex + 1).name != null)
+                {
+                    string changeName = productController.GetProductById(this.TabIndex + 1).name;
+                    lblGearName.Text = changeName;
+                    bool changeAvailability = productController.GetProductById(this.TabIndex + 1).isAvailable;
+                    if (changeAvailability == false)
+                    {
+                        lblAvailability.Text = "Unavailable";
+                        lblAvailability.ForeColor = System.Drawing.Color.OrangeRed;
+                    }
+                }
+                */
+                else
+                {
+                    lblGearName.Text = "Object not Found";
+                    lblGearName.ForeColor = System.Drawing.Color.OrangeRed;
                     lblAvailability.Text = "Unavailable";
                     lblAvailability.ForeColor = System.Drawing.Color.OrangeRed;
                 }
             }
-            else
-            {
-                lblGearName.Text = "Object not Found";
-                lblGearName.ForeColor = System.Drawing.Color.OrangeRed;
-                lblAvailability.Text = "Unavailable";
-                lblAvailability.ForeColor = System.Drawing.Color.OrangeRed;
-            }
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {

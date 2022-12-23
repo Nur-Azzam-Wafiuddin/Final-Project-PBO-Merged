@@ -15,6 +15,7 @@ namespace Final_Project_PBO_1
 {
     public partial class LoginPage : Form
     {
+        
         public LoginPage()
         {
             InitializeComponent();
@@ -51,11 +52,9 @@ namespace Final_Project_PBO_1
 
             else if (FoundUser != null && txtPasswordSignIn.Text == FoundUser.password)
             {
-                var homepage = new MainForm();
+                var homepage = new MainForm(txtUsernameSignIn.Text);
                 this.Hide();
                 homepage.Show();
-                LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
-                loginSessionController.LoggingIn(FoundUser);
             }
 
             else

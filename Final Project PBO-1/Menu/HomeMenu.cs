@@ -27,7 +27,8 @@ namespace Final_Project_PBO_1
             int ItemNum = productList.Count;
             if (ItemNum != 0)
             {
-                for (int i = 0; i <= ItemNum; i++)
+                int i = 0;
+                foreach(Product product in productList)
                 {
                     BoxList Container = new Final_Project_PBO_1.BoxList();
                     this.panel3.Controls.Add(Container);
@@ -35,9 +36,10 @@ namespace Final_Project_PBO_1
                     Container.BackColor = System.Drawing.Color.White;
                     Container.Location = new System.Drawing.Point(30 + (300 * (i % 4)), 38 + (200 * (i / 4)));
                     Container.Margin = new System.Windows.Forms.Padding(3, 1012, 3, 1012);
-                    Container.Name = "boxList1";
+                    Container.Name = product.name;
                     Container.Size = new System.Drawing.Size(257, 165);
                     Container.TabIndex = i;
+                    i++;
                 }
             }
         }

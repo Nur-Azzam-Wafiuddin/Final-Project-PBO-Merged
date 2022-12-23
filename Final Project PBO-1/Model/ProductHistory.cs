@@ -9,7 +9,7 @@ namespace Final_Project_PBO_1.Model
     internal class ProductHistory
     {
         public int id { get; set; }
-        public string Name { get; set; }
+        public string name { get; set; }
         public string borrowState { get; set; }
     }
 }

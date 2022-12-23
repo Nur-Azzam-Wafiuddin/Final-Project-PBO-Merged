@@ -31,12 +31,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnBook = new System.Windows.Forms.Button();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.labeltumbal = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -44,12 +45,14 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.labeltumbal);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1249, 121);
             this.panel7.TabIndex = 7;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label2
             // 
@@ -74,6 +77,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1249, 583);
             this.panel3.TabIndex = 9;
+            this.panel3.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 583);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1249, 0);
+            this.panel1.TabIndex = 12;
             // 
             // label5
             // 
@@ -103,7 +116,7 @@
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker.Location = new System.Drawing.Point(98, 82);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(170, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(170, 20);
             this.dateTimePicker.TabIndex = 9;
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
@@ -127,14 +140,14 @@
             this.label3.Text = "Summary of Your Book:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
+            // labeltumbal
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 583);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 0);
-            this.panel1.TabIndex = 12;
+            this.labeltumbal.AutoSize = true;
+            this.labeltumbal.Location = new System.Drawing.Point(480, 52);
+            this.labeltumbal.Name = "labeltumbal";
+            this.labeltumbal.Size = new System.Drawing.Size(0, 13);
+            this.labeltumbal.TabIndex = 6;
+            this.labeltumbal.Visible = false;
             // 
             // CheckOutMenu
             // 
@@ -145,6 +158,7 @@
             this.Size = new System.Drawing.Size(1249, 704);
             this.Load += new System.EventHandler(this.CheckOutMenu_Load);
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labeltumbal;
     }
 }

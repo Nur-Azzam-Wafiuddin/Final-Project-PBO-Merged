@@ -21,7 +21,7 @@ namespace Final_Project_PBO_1
             List<Account> accoutList = accountController.GetAllAccount();
             foreach (Account account in accoutList)
             {
-                dataGridViewUser.Rows.Add(account.id.ToString(), account.Name.ToString(), account.username.ToString());
+                dataGridViewUser.Rows.Add(account.id.ToString(), account.name.ToString(), account.username.ToString());
             }
             
         }

@@ -22,6 +22,11 @@ namespace Final_Project_PBO_1
         {
             InitializeComponent();
         }
+        public CheckOutMenu(string user)
+        {
+            InitializeComponent();
+            this.labeltumbal.Text = user;
+        }
         public void CheckOutMenu_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < Cart.getCount(); i++)
@@ -44,16 +49,22 @@ namespace Final_Project_PBO_1
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+            AccountController accountController = new AccountController();
+            List<Account> accoutList = accountController.GetAllAccount();
             ProductHistory prodHis = new ProductHistory();
-            Account currentAccount = loginSessionController.getLoggedAccount();
+            Account FoundUser = accoutList.Find(x => x.username == this.labeltumbal.Text);
             for (int i = 0; i < Cart.getCount(); i++)
             {
-                prodHis.Name = Cart.show(i);
+                prodHis.name = Cart.show(i);
             }
-            currentAccount.productHistory.Add(prodHis);
+            FoundUser.productHistory.Add(prodHis);
             Cart.clear();
             this.panel1.Controls.Clear();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

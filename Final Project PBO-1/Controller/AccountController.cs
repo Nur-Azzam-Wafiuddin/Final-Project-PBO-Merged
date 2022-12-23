@@ -17,7 +17,7 @@ namespace Final_Project_PBO_1.Controller
         {
             SendAccount SignUpData = new SendAccount();
 
-            SignUpData.Name = name;
+            SignUpData.name = name;
             SignUpData.username = username;
             SignUpData.password = password;
             SignUpData.productHistory = new List<ProductHistory>() { };

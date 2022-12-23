@@ -150,7 +150,6 @@
     </Compile>
     <Compile Include="Cart.cs" />
     <Compile Include="Controller\AccountController.cs" />
-    <Compile Include="Controller\LoginSignupSessionController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controls\BoxList.cs">
       <SubType>UserControl</SubType>

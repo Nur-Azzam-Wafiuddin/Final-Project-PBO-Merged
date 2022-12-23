@@ -36,10 +36,6 @@ namespace Final_Project_PBO_1
             if(initAdmin == null)
             {
                 accountController.PostAccount("admin", "admin", "admin");
-                productController.PostProduct("Kamera Sony a6600 #1",true);
-                productController.PostProduct("Kamera Sony a6600 #2", true);
-                productController.PostProduct("Lighting Mcqueen", true);
-
             }
 
             var loginpage = new LoginPage();

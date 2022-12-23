@@ -9,22 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CartTemp;
 using Final_Project_PBO_1.Controller;
+using Final_Project_PBO_1.Model;
 
 namespace Final_Project_PBO_1
 {
     public partial class MainForm : Form
     {
         HomeMenu menuHome = new Final_Project_PBO_1.HomeMenu();
-        CheckOutMenu menuCheckOut = new Final_Project_PBO_1.CheckOutMenu();
-
+        CheckOutMenu menuCheckOut = new Final_Project_PBO_1.CheckOutMenu(temp);
+        private static string temp; 
         public MainForm()
         {
             InitializeComponent();
         }
+        public MainForm(string user)
+        {
+            InitializeComponent();
+            this.label1.Text = user;
+            temp = user;
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
-            this.label1.Text = loginSessionController.getLoggedAccount().Name;
+            AccountController accountController = new AccountController();
+            List<Account> accoutList = accountController.GetAllAccount();
+            Account FoundUser = accoutList.Find(x => x.username == this.label1.Text);
+            this.label1.Text = FoundUser.username;
             btnHome_Click(sender, e);
         }
 
@@ -74,11 +83,14 @@ namespace Final_Project_PBO_1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
-            loginSessionController.LoggingIn(null);
             this.Close();
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
