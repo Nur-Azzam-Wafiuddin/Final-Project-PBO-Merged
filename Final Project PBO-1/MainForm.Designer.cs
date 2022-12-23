@@ -134,7 +134,6 @@
             this.btnHistory.Text = " History";
             this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHistory.UseVisualStyleBackColor = true;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnHome
             // 

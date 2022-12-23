@@ -28,7 +28,6 @@ namespace Final_Project_PBO_1
                 HistoryCheck.Name = "historyList1";
                 HistoryCheck.Size = new System.Drawing.Size(1249, 59);
                 HistoryCheck.TabIndex = i;
-                /*HistoryCheck.Load += new System.EventHandler(this.historyList1_Load);*/
             }
         }
     }

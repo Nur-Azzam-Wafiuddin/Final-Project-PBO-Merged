@@ -18,7 +18,7 @@ namespace Final_Project_PBO_1
         }
         public void LoadThis(object sender, EventArgs e)
         {
-
+            //ganti teks aja
         }
     }
 }

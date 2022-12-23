@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CartTemp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,31 +9,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
+using Final_Project_PBO_1.Model;
+using Final_Project_PBO_1.Controller;
+
 
 namespace Final_Project_PBO_1
 {
     public partial class CheckOutMenu : UserControl
     {
         CheckOut CheckList = new Final_Project_PBO_1.CheckOut();
-
         public CheckOutMenu()
         {
             InitializeComponent();
         }
         public void CheckOutMenu_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < Cart.getCount(); i++)
             {
                 CheckOut CheckList = new Final_Project_PBO_1.CheckOut();
                 this.panel1.Controls.Add(CheckList);
 
-                /*string name = "checkOut"+i.ToString();*/
                 CheckList.Location = new System.Drawing.Point(93, (i * 50));
                 CheckList.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
                 CheckList.Name = "checkOut";
                 CheckList.Size = new System.Drawing.Size(596, 41);
                 CheckList.TabIndex = i;
-
             }
         }
 
@@ -43,10 +44,16 @@ namespace Final_Project_PBO_1
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 18; i++)
+            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+            ProductHistory prodHis = new ProductHistory();
+            Account currentAccount = loginSessionController.getLoggedAccount();
+            for (int i = 0; i < Cart.getCount(); i++)
             {
-                this.panel1.Controls.Clear();
+                prodHis.Name = Cart.show(i);
             }
+            currentAccount.productHistory.Add(prodHis);
+            Cart.clear();
+            this.panel1.Controls.Clear();
         }
     }
 }

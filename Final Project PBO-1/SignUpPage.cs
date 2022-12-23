@@ -122,6 +122,11 @@ namespace Final_Project_PBO_1
             homepage.Show();
             AccountController accountController = new AccountController();
             accountController.PostAccount(txtNameSignUp.Text, txtUsernameSignUp.Text, txtPasswordSignUp.Text);
+
+            List<Account> accoutList = accountController.GetAllAccount();
+            Account FoundUser = accoutList.Find(x => x.username == txtNameSignUp.Text);
+            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+            loginSessionController.LoggingIn(FoundUser);
             }
         }
 
