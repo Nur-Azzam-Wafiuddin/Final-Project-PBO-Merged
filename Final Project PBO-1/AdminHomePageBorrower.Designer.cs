@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUserList = new System.Windows.Forms.Button();
             this.AdminPageLogout = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnUserList = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBorrower = new System.Windows.Forms.Button();
             this.btnItem = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.AdminPageBorrowerList1 = new Final_Project_PBO_1.AdminPageBorrowerList();
             this.adminPageUserList1 = new Final_Project_PBO_1.AdminPageUserList();
             this.adminPageItemList1 = new Final_Project_PBO_1.AdminPageItemList();
-            this.AdminPageBorrowerList1 = new Final_Project_PBO_1.AdminPageBorrowerList();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +61,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 500);
             this.panel1.TabIndex = 0;
+            // 
+            // btnUserList
+            // 
+            this.btnUserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
+            this.btnUserList.BackgroundImage = global::Final_Project_PBO_1.Properties.Resources.userlist;
+            this.btnUserList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUserList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserList.FlatAppearance.BorderSize = 0;
+            this.btnUserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserList.Location = new System.Drawing.Point(0, 200);
+            this.btnUserList.Name = "btnUserList";
+            this.btnUserList.Size = new System.Drawing.Size(150, 60);
+            this.btnUserList.TabIndex = 7;
+            this.btnUserList.UseVisualStyleBackColor = false;
+            this.btnUserList.Click += new System.EventHandler(this.btnUserList_Click);
             // 
             // AdminPageLogout
             // 
@@ -109,34 +124,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrator";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::Final_Project_PBO_1.Properties.Resources.x;
-            this.pictureBox4.Location = new System.Drawing.Point(768, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 17);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // btnUserList
-            // 
-            this.btnUserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
-            this.btnUserList.BackgroundImage = global::Final_Project_PBO_1.Properties.Resources.userlist;
-            this.btnUserList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUserList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUserList.FlatAppearance.BorderSize = 0;
-            this.btnUserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserList.Location = new System.Drawing.Point(0, 200);
-            this.btnUserList.Name = "btnUserList";
-            this.btnUserList.Size = new System.Drawing.Size(150, 60);
-            this.btnUserList.TabIndex = 7;
-            this.btnUserList.UseVisualStyleBackColor = false;
-            this.btnUserList.Click += new System.EventHandler(this.btnUserList_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Final_Project_PBO_1.Properties.Resources.tetiren;
@@ -177,6 +164,28 @@
             this.btnItem.UseVisualStyleBackColor = false;
             this.btnItem.Click += new System.EventHandler(this.button2_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::Final_Project_PBO_1.Properties.Resources.x;
+            this.pictureBox4.Location = new System.Drawing.Point(768, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 17);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // AdminPageBorrowerList1
+            // 
+            this.AdminPageBorrowerList1.BackColor = System.Drawing.Color.White;
+            this.AdminPageBorrowerList1.Location = new System.Drawing.Point(150, 0);
+            this.AdminPageBorrowerList1.Name = "AdminPageBorrowerList1";
+            this.AdminPageBorrowerList1.Size = new System.Drawing.Size(650, 500);
+            this.AdminPageBorrowerList1.TabIndex = 14;
+            this.AdminPageBorrowerList1.Load += new System.EventHandler(this.adminPageBorrowerList1_Load);
+            // 
             // adminPageUserList1
             // 
             this.adminPageUserList1.BackColor = System.Drawing.Color.White;
@@ -192,15 +201,6 @@
             this.adminPageItemList1.Name = "adminPageItemList1";
             this.adminPageItemList1.Size = new System.Drawing.Size(650, 500);
             this.adminPageItemList1.TabIndex = 15;
-            // 
-            // AdminPageBorrowerList1
-            // 
-            this.AdminPageBorrowerList1.BackColor = System.Drawing.Color.White;
-            this.AdminPageBorrowerList1.Location = new System.Drawing.Point(150, 0);
-            this.AdminPageBorrowerList1.Name = "AdminPageBorrowerList1";
-            this.AdminPageBorrowerList1.Size = new System.Drawing.Size(650, 500);
-            this.AdminPageBorrowerList1.TabIndex = 14;
-            this.AdminPageBorrowerList1.Load += new System.EventHandler(this.adminPageBorrowerList1_Load);
             // 
             // AdminHomePageBorrower
             // 
@@ -222,8 +222,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

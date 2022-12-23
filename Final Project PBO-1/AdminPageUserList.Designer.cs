@@ -35,6 +35,9 @@
             this.accounts = new Final_Project_PBO_1.Accounts();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.IDUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderBorrower.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
@@ -64,12 +67,20 @@
             // 
             // dataGridViewUser
             // 
+            this.dataGridViewUser.AllowUserToAddRows = false;
+            this.dataGridViewUser.AllowUserToDeleteRows = false;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
-            this.dataGridViewUser.Location = new System.Drawing.Point(25, 100);
+            this.dataGridViewUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDUser,
+            this.NameUser,
+            this.UsernameUser});
+            this.dataGridViewUser.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewUser.Location = new System.Drawing.Point(139, 100);
             this.dataGridViewUser.Name = "dataGridViewUser";
-            this.dataGridViewUser.Size = new System.Drawing.Size(600, 300);
+            this.dataGridViewUser.ReadOnly = true;
+            this.dataGridViewUser.Size = new System.Drawing.Size(299, 300);
             this.dataGridViewUser.TabIndex = 2;
             this.dataGridViewUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -87,6 +98,25 @@
             // 
             this.accountsBindingSource1.DataSource = this.accounts;
             this.accountsBindingSource1.Position = 0;
+            // 
+            // IDUser
+            // 
+            this.IDUser.HeaderText = "ID";
+            this.IDUser.Name = "IDUser";
+            this.IDUser.ReadOnly = true;
+            this.IDUser.Width = 50;
+            // 
+            // NameUser
+            // 
+            this.NameUser.HeaderText = "Name";
+            this.NameUser.Name = "NameUser";
+            this.NameUser.ReadOnly = true;
+            // 
+            // UsernameUser
+            // 
+            this.UsernameUser.HeaderText = "Username";
+            this.UsernameUser.Name = "UsernameUser";
+            this.UsernameUser.ReadOnly = true;
             // 
             // AdminPageUserList
             // 
@@ -115,5 +145,8 @@
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private Accounts accounts;
         private System.Windows.Forms.BindingSource accountsBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsernameUser;
     }
 }

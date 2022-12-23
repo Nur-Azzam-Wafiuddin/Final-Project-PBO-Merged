@@ -78,5 +78,9 @@ namespace Final_Project_PBO_1
             loginSessionController.LoggingIn(null);
             this.Close();
         }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

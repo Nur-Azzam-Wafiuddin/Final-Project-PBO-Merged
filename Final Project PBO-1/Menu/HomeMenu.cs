@@ -42,5 +42,25 @@ namespace Final_Project_PBO_1
             }
         }
 
+
+        private void Container_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeMenu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
