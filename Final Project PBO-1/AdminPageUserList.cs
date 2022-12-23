@@ -17,6 +17,13 @@ namespace Final_Project_PBO_1
         public AdminPageUserList()
         {
             InitializeComponent();
+            AccountController accountController = new AccountController();
+            List<Account> accoutList = accountController.GetAllAccount();
+            foreach (Account account in accoutList)
+            {
+                dataGridViewUser.Rows.Add(account.id.ToString(), account.Name.ToString(), account.username.ToString());
+            }
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

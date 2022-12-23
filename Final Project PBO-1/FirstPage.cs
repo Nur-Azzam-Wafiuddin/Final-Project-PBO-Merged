@@ -29,11 +29,17 @@ namespace Final_Project_PBO_1
             AccountController accountController = new AccountController();
             List<Account> accoutList = accountController.GetAllAccount();
 
+            ProductController productController = new ProductController();
+
             var initAdmin = accoutList.Find(x => x.id == 1);
 
             if(initAdmin == null)
             {
                 accountController.PostAccount("admin", "admin", "admin");
+                productController.PostProduct("Kamera Sony a6600 #1",true);
+                productController.PostProduct("Kamera Sony a6600 #2", true);
+                productController.PostProduct("Lighting Mcqueen", true);
+
             }
 
             var loginpage = new LoginPage();

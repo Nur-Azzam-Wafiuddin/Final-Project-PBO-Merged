@@ -10,7 +10,6 @@ namespace Final_Project_PBO_1.Model
     {
         public int id { get; set; }
         public string name { get; set; }
-        public string category { get; set; }
         public bool isAvailable { get; set; }
     }
 }

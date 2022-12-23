@@ -31,6 +31,11 @@
             this.HeaderBorrower = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewBorrower = new System.Windows.Forms.DataGridView();
+            this.BorrowerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BorrowerUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemsToBorrow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcceptBorrow = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.RejectBorrow = new System.Windows.Forms.DataGridViewButtonColumn();
             this.HeaderBorrower.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBorrower)).BeginInit();
@@ -57,14 +62,56 @@
             // 
             // dataGridViewBorrower
             // 
+            this.dataGridViewBorrower.AllowUserToDeleteRows = false;
             this.dataGridViewBorrower.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewBorrower.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewBorrower.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBorrower.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
-            this.dataGridViewBorrower.Location = new System.Drawing.Point(25, 100);
+            this.dataGridViewBorrower.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BorrowerName,
+            this.BorrowerUsername,
+            this.ItemsToBorrow,
+            this.AcceptBorrow,
+            this.RejectBorrow});
+            this.dataGridViewBorrower.Location = new System.Drawing.Point(12, 86);
             this.dataGridViewBorrower.Name = "dataGridViewBorrower";
-            this.dataGridViewBorrower.Size = new System.Drawing.Size(600, 300);
+            this.dataGridViewBorrower.ReadOnly = true;
+            this.dataGridViewBorrower.Size = new System.Drawing.Size(625, 150);
             this.dataGridViewBorrower.TabIndex = 1;
-            this.dataGridViewBorrower.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewBorrower.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
+            // 
+            // BorrowerName
+            // 
+            this.BorrowerName.HeaderText = "Borrower Name";
+            this.BorrowerName.Name = "BorrowerName";
+            this.BorrowerName.ReadOnly = true;
+            this.BorrowerName.Width = 150;
+            // 
+            // BorrowerUsername
+            // 
+            this.BorrowerUsername.HeaderText = "Username";
+            this.BorrowerUsername.Name = "BorrowerUsername";
+            this.BorrowerUsername.ReadOnly = true;
+            // 
+            // ItemsToBorrow
+            // 
+            this.ItemsToBorrow.HeaderText = "Items to Borrow";
+            this.ItemsToBorrow.Name = "ItemsToBorrow";
+            this.ItemsToBorrow.ReadOnly = true;
+            this.ItemsToBorrow.Width = 230;
+            // 
+            // AcceptBorrow
+            // 
+            this.AcceptBorrow.HeaderText = "Accept";
+            this.AcceptBorrow.Name = "AcceptBorrow";
+            this.AcceptBorrow.ReadOnly = true;
+            this.AcceptBorrow.Width = 50;
+            // 
+            // RejectBorrow
+            // 
+            this.RejectBorrow.HeaderText = "Reject";
+            this.RejectBorrow.Name = "RejectBorrow";
+            this.RejectBorrow.ReadOnly = true;
+            this.RejectBorrow.Width = 50;
             // 
             // AdminPageBorrowerList
             // 
@@ -87,5 +134,10 @@
         private System.Windows.Forms.Panel HeaderBorrower;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridViewBorrower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowerUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemsToBorrow;
+        private System.Windows.Forms.DataGridViewButtonColumn AcceptBorrow;
+        private System.Windows.Forms.DataGridViewButtonColumn RejectBorrow;
     }
 }

@@ -60,14 +60,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(101, 750);
+            this.panel1.Size = new System.Drawing.Size(101, 749);
             this.panel1.TabIndex = 1;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnLogOut);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 635);
+            this.panel5.Location = new System.Drawing.Point(0, 634);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(101, 100);
             this.panel5.TabIndex = 7;
@@ -93,7 +93,7 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 735);
+            this.panel4.Location = new System.Drawing.Point(0, 734);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(101, 15);
             this.panel4.TabIndex = 6;
@@ -220,14 +220,15 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(101, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1249, 704);
+            this.panel3.Size = new System.Drawing.Size(1249, 703);
             this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1350, 750);
+            this.ClientSize = new System.Drawing.Size(1350, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);

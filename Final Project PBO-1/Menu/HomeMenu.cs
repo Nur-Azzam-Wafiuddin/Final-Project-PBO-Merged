@@ -55,5 +55,10 @@ namespace Final_Project_PBO_1
         {
 
         }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
