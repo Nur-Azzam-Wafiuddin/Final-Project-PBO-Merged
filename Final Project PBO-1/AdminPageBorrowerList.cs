@@ -24,12 +24,13 @@ namespace Final_Project_PBO_1
 
             foreach (Account account in accountList)
             {
+                string FinishProductHistory = "";
                 List<ProductHistory> productHistories = account.productHistory;
                 foreach (ProductHistory productHistory in productHistories)
                 {
-                    string ItemName = productHistory.Name + ", ";
+                    FinishProductHistory = FinishProductHistory + productHistory.Name + ", ";
                 }
-                dataGridViewBorrower.Rows.Add(account.Name.ToString(), account.username.ToString(), account.productHistory);
+                dataGridViewBorrower.Rows.Add(account.Name.ToString(), account.username.ToString(), FinishProductHistory);
             }
         }
 
