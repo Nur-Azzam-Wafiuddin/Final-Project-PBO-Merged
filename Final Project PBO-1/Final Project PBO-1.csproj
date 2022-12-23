@@ -125,7 +125,7 @@
       <DependentUpon>Accounts.xsd</DependentUpon>
     </Compile>
     <Compile Include="AdminHomePageBorrower.cs">
-       <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminHomePageBorrower.Designer.cs">
       <DependentUpon>AdminHomePageBorrower.cs</DependentUpon>
@@ -148,7 +148,9 @@
     <Compile Include="AdminPageUserList.Designer.cs">
       <DependentUpon>AdminPageUserList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs" />
     <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\LoginSignupSessionController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controls\BoxList.cs">
       <SubType>UserControl</SubType>

@@ -54,6 +54,8 @@ namespace Final_Project_PBO_1
                 var homepage = new MainForm();
                 this.Hide();
                 homepage.Show();
+                LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+                loginSessionController.LoggingIn(FoundUser);
             }
 
             else

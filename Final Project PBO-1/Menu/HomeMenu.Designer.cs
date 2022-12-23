@@ -81,7 +81,6 @@
             this.Controls.Add(this.panel7);
             this.Name = "HomeMenu";
             this.Size = new System.Drawing.Size(1249, 704);
-            this.Load += new System.EventHandler(this.HomeMenu_Load_1);
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 

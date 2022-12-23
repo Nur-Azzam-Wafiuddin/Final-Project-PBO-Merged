@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CartTemp;
+using Final_Project_PBO_1.Controller;
 
 namespace Final_Project_PBO_1
 {
     public partial class MainForm : Form
     {
-        HistoryMenu menuHistory = new Final_Project_PBO_1.HistoryMenu();
         HomeMenu menuHome = new Final_Project_PBO_1.HomeMenu();
         CheckOutMenu menuCheckOut = new Final_Project_PBO_1.CheckOutMenu();
 
@@ -22,48 +23,40 @@ namespace Final_Project_PBO_1
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+            this.label1.Text = loginSessionController.getLoggedAccount().Name;
             btnHome_Click(sender, e);
         }
 
-        private void showPanel(Control add, Control remove1, Control remove2)
+        private void showPanel(Control add, Control remove)
         {
-            panel3.Controls.Remove(remove1);
-            panel3.Controls.Remove(remove2);
+            panel3.Controls.Remove(remove);
             panel3.Controls.Add(add);
 
             add.Location = new System.Drawing.Point(0, 0);
             add.Size = new System.Drawing.Size(1249, 704);
             add.TabIndex = 0;
         }
-        private void changeMenu(Control add, Control remove1, Control remove2)
+        private void changeMenu(Control add, Control remove)
         {
-            remove2.BackColor = Color.FromArgb(15, 26, 56);
-            remove1.BackColor = Color.FromArgb(15, 26, 56);
+            remove.BackColor = Color.FromArgb(15, 26, 56);
             add.BackColor = Color.FromArgb(242, 168, 7);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            changeMenu(btnHome, btnCO, btnHistory);
-            showPanel(menuHome, menuCheckOut, menuHistory);
+            changeMenu(btnHome, btnCO);
+            showPanel(menuHome, menuCheckOut);
 
-            menuHome.HomeMenu_Load(sender,e);
-        }
-
-        private void btnHistory_Click(object sender, EventArgs e)
-        {
-            changeMenu(btnHistory, btnHome, btnCO);
-            showPanel(menuHistory, menuHome, menuCheckOut);
-
-            menuHistory.HistoryMenu_Load(sender,e);
+            menuHome.HomeMenu_Load(sender, e);
         }
 
         private void btnCO_Click(object sender, EventArgs e)
         {
-            changeMenu(btnCO, btnHistory, btnHome);
-            showPanel(menuCheckOut, menuHistory, menuHome);
+            changeMenu(btnCO, btnHome);
+            showPanel(menuCheckOut, menuHome);
 
-            menuCheckOut.CheckOutMenu_Load(sender,e);   
+            menuCheckOut.CheckOutMenu_Load(sender, e);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -81,9 +74,9 @@ namespace Final_Project_PBO_1
 
         private void button6_Click(object sender, EventArgs e)
         {
+            LoginSignupSessionController loginSessionController = new LoginSignupSessionController();
+            loginSessionController.LoggingIn(null);
             this.Close();
         }
-
-      
     }
 }
